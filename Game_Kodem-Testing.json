@@ -6,7 +6,7 @@
     "decksUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemDecks.json"
   },
   "cards": {
-    "dataUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemCards.tcg.json"
+    "dataUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemCards.json"
   },
 
   "images": {
@@ -17,10 +17,7 @@
   "deckBuilding": {
     "mainFilters": ["type", "energy", "set"],
     "formats": [
-      {
-        "title": "Classic",
-        "gameplay": "Classic"
-      }
+      { "title": "Classic", "gameplay": "Classic" }
     ]
   },
 
@@ -57,7 +54,7 @@
     ],
     "startingSetup": {
       "putFaceDown": { "board": 3 },
-      "protector": { "life": 12, "rests": 3 },
+      "protector":   { "life": 12, "rests": 3 },
       "lifeDefault": 6
     }
   },
@@ -72,6 +69,6 @@
   "script": "https://U2301.github.io/Kodem-TCG-Arena/Script_Kodem.js",
   "ui": {
     "statusTags": ["Quemar", "Envenenar", "Abismar", "Protegida/o"],
-    "counters": ["Vida", "Descansos"]
+    "counters":   ["Vida", "Descansos"]
   }
 }
