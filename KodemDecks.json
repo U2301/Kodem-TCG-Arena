@@ -1,89 +1,77 @@
 [
   {
     "name": "Demo — Kódem 15",
+    "id": "kodem-demo-001",
+    "game": "Kódem TCG",
+    "format": "Classic",
+    "createdAt": "2026-03-18T19:28:47.248Z",
+    "lastModifiedAt": "2026-03-18T19:28:47.248Z",
     "cards": [
       {
-        "id": "DOOC-018",
         "qty": 1,
         "zone": "protector"
       },
       {
-        "id": "DOOC-016",
         "qty": 1,
         "zone": "bio"
       },
       {
-        "id": "1DRMA-002",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMA-003",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMA-010",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMA-012",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMA-016",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMA-017",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMA-018",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMA-020",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMG-013",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMG-014",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMG-016",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMG-017",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMG-021",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMP-012",
         "qty": 1,
         "zone": "deck"
       },
       {
-        "id": "1DRMP-013",
         "qty": 1,
         "zone": "deck"
       }
