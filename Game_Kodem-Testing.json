@@ -1,16 +1,19 @@
 {
   "name": "Kódem TCG (Testing)",
   "version": "0.1.0",
+
   "defaultRessources": {
     "decksUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemDecks.json"
   },
   "cards": {
     "dataUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemCards.tcg.json"
   },
+
   "images": {
     "frontTemplate": "https://U2301.github.io/Kodem-TCG-Arena/images/{id}.webp",
     "backDefault": "https://U2301.github.io/Kodem-TCG-Arena/images/kodem-back.png"
   },
+
   "deckBuilding": {
     "mainFilters": ["type", "energy", "set"],
     "formats": [
@@ -20,6 +23,7 @@
       }
     ]
   },
+
   "gameplay": {
     "Classic": {
       "mulligan": {
@@ -41,6 +45,7 @@
       "hideFacedDownCards": false
     }
   },
+
   "layout": {
     "zones": [
       { "id": "deck",      "name": "Mazo",           "visible": false },
@@ -56,13 +61,13 @@
       "lifeDefault": 6
     }
   },
+
   "rules": {
     "minDeckSize": 15,
     "maxDeckSize": 24,
     "shuffleDeck": false,
     "replacement": { "take": 3, "choose": 1, "putBackBottom": true }
   },
-
 
   "script": "https://U2301.github.io/Kodem-TCG-Arena/Script_Kodem.js",
   "ui": {
