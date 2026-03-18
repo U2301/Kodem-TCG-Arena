@@ -6,7 +6,7 @@
     "decksUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemDecks.json"
   },
   "cards": {
-    "dataUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemCards.json"
+    "dataUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemCards.tcg.json"
   },
 
   "images": {
