@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Demo — Raíces",
+    "cards": [
+      { "id": "KDM-AT-ARIAM-BALANCE",         "qty": 1, "zone": "deck" },
+      { "id": "KDM-RAVA-NOK-FRIO-MAGNO",      "qty": 1, "zone": "deck" },
+      { "id": "KDM-BIO-ASKAME-REINO-VIDA",    "qty": 1, "zone": "bio"  },
+      { "id": "KDM-PROTECT-YANZI-PRECISION",  "qty": 1, "zone": "protector" }
+    ]
+  }
+]
