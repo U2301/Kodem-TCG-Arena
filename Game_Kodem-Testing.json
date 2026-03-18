@@ -1,0 +1,37 @@
+{
+  "name": "Kódem TCG (Testing)",
+  "version": "0.1.0",
+  "cardsUrl": "https://raw.githubusercontent.com/U2301/Kodem-database/main/KodemCards.json",
+  "decksUrl": "https://raw.githubusercontent.com/U2301/Kodem-database/main/KodemDecks.json",
+  "images": {
+    "frontTemplate": "https://raw.githubusercontent.com/U2301/Kodem-database/main/Images/cards/{id}.png",
+    "backDefault": "https://raw.githubusercontent.com/U2301/Kodem-database/main/Images/backs/kodem-back.png"
+  },
+  "layout": {
+    "zones": [
+      { "id": "deck",       "name": "Mazo",           "visible": false },
+      { "id": "board",      "name": "Zona Principal", "slots": 3, "visible": true },
+      { "id": "protector",  "name": "Protector",      "visible": true },
+      { "id": "bio",        "name": "Bio",            "visible": true },
+      { "id": "equips",     "name": "Equipos",        "visible": true },
+      { "id": "grave",      "name": "Extinción",      "visible": true }
+    ],
+    "startingSetup": {
+      "putFaceDown": { "board": 3 },
+      "protector": { "life": 12, "rests": 3 },
+      "lifeDefault": 6
+    }
+  },
+  "rules": {
+    "minDeckSize": 15,
+    "maxDeckSize": 24,
+    "shuffleDeck": false,
+    "replacement": { "take": 3, "choose": 1, "putBackBottom": true }
+  },
+  "script": "https://raw.githubusercontent.com/U2301/Kodem-database/main/Script_Kodem.js",
+  "ui": {
+    "statusTags": ["Quemar","Envenenar","Abismar","Protegida/o"],
+    "counters": ["Vida","Descansos"]
+  }
+}
+``
