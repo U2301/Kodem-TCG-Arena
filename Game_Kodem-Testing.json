@@ -1,24 +1,54 @@
 {
   "name": "Kódem TCG (Testing)",
   "version": "0.1.0",
-  "cardsUrl": "https://raw.githubusercontent.com/U2301/Kodem-TCG-Arena/main/KodemCards.json",
-  "decksUrl": "https://raw.githubusercontent.com/U2301/Kodem-TCG-Arena/main/KodemDecks.json",
+  "cardsUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemCards.tcg.json",
+  "decksUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemDecks.json",
   "images": {
-    "frontTemplate": "https://raw.githubusercontent.com/U2301/Kodem-TCG-Arena/main/Images/cards/{id}.png",
-    "backDefault": "https://raw.githubusercontent.com/U2301/Kodem-TCG-Arena/main/Images/backs/kodem-back.png"
+    "frontTemplate": "https://U2301.github.io/Kodem-TCG-Arena/images/{id}.webp",
+    "backDefault": "https://U2301.github.io/Kodem-TCG-Arena/images/kodem-back.png"
   },
   "layout": {
     "zones": [
-      { "id": "deck",       "name": "Mazo",           "visible": false },
-      { "id": "board",      "name": "Zona Principal", "slots": 3, "visible": true },
-      { "id": "protector",  "name": "Protector",      "visible": true },
-      { "id": "bio",        "name": "Bio",            "visible": true },
-      { "id": "equips",     "name": "Equipos",        "visible": true },
-      { "id": "grave",      "name": "Extinción",      "visible": true }
+      {
+        "id": "deck",
+        "name": "Mazo",
+        "visible": false
+      },
+      {
+        "id": "board",
+        "name": "Zona Principal",
+        "slots": 3,
+        "visible": true
+      },
+      {
+        "id": "protector",
+        "name": "Protector",
+        "visible": true
+      },
+      {
+        "id": "bio",
+        "name": "Bio",
+        "visible": true
+      },
+      {
+        "id": "equips",
+        "name": "Equipos",
+        "visible": true
+      },
+      {
+        "id": "grave",
+        "name": "Extinción",
+        "visible": true
+      }
     ],
     "startingSetup": {
-      "putFaceDown": { "board": 3 },
-      "protector": { "life": 12, "rests": 3 },
+      "putFaceDown": {
+        "board": 3
+      },
+      "protector": {
+        "life": 12,
+        "rests": 3
+      },
       "lifeDefault": 6
     }
   },
@@ -26,11 +56,23 @@
     "minDeckSize": 15,
     "maxDeckSize": 24,
     "shuffleDeck": false,
-    "replacement": { "take": 3, "choose": 1, "putBackBottom": true }
+    "replacement": {
+      "take": 3,
+      "choose": 1,
+      "putBackBottom": true
+    }
   },
-  "script": "https://raw.githubusercontent.com/U2301/Kodem-TCG-Arena/main/Script_Kodem.js",
+  "script": "https://U2301.github.io/Kodem-TCG-Arena/Script_Kodem.js",
   "ui": {
-    "statusTags": ["Quemar","Envenenar","Abismar","Protegida/o"],
-    "counters": ["Vida","Descansos"]
+    "statusTags": [
+      "Quemar",
+      "Envenenar",
+      "Abismar",
+      "Protegida/o"
+    ],
+    "counters": [
+      "Vida",
+      "Descansos"
+    ]
   }
 }
