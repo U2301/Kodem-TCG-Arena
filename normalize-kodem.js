@@ -67,23 +67,26 @@ function isPlayable(card) {
   fs.writeFileSync(OUT_PATH, JSON.stringify(normalized, null, 2), 'utf8');
   console.log(`✅ ${OUT_PATH} generado (${normalized.length} cartas)`);
 
-  // 4) mazo demo
-  const pickByType = (t) => normalized.find(c => (c.type || '').toLowerCase() === t);
-  const protector = pickByType('protector');
-  const bio = pickByType('bio');
-  const adendei = normalized.filter(c => (c.type || '').toLowerCase() === 'adendei').slice(0, 2);
+// 4) mazo demo: 15 Adendei + 1 Protector (protector) + 1 Bio (bio) si existen
+const pickByType = (t) => normalized.find(c => (c.type || '').toLowerCase() === t);
+const getByType = (t) => normalized.filter(c => (c.type || '').toLowerCase() === t);
 
-  const demoDeck = {
-    name: "Demo — Test Kódem",
-    cards: [
-      ...(protector ? [{ id: protector.id, qty: 1, zone: "protector" }] : []),
-      ...(bio       ? [{ id: bio.id,       qty: 1, zone: "bio"       }] : []),
-      ...adendei.map(c => ({ id: c.id, qty: 1, zone: "deck" }))
-    ]
-  };
-  fs.writeFileSync('KodemDecks.json', JSON.stringify([demoDeck], null, 2), 'utf8');
-  console.log(`✅ KodemDecks.json generado`);
+const protector = pickByType('protector') || null;
+const bio       = pickByType('bio')       || null;
+const adendei15 = getByType('adendei').slice(0, 15);
 
+const demoCards = [];
+if (protector) demoCards.push({ id: protector.id, qty: 1, zone: "protector" });
+if (bio)       demoCards.push({ id: bio.id,       qty: 1, zone: "bio" });
+adendei15.forEach(c => demoCards.push({ id: c.id, qty: 1, zone: "deck" }));
+
+const demoDeck = {
+  name: "Demo — Kódem 15",
+  cards: demoCards
+};
+
+fs.writeFileSync('KodemDecks.json', JSON.stringify([demoDeck], null, 2), 'utf8');
+console.log(`✅ KodemDecks.json generado (cartas en deck: ${adendei15.length})`);
   // 5) game file para Pages o raw
   if (GH_USER && GH_REPO) {
     const base = USE_PAGES
