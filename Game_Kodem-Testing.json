@@ -1,54 +1,58 @@
 {
   "name": "Kódem TCG (Testing)",
   "version": "0.1.0",
-  "cardsUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemCards.tcg.json",
-  "decksUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemDecks.json",
+  "defaultRessources": {
+    "decksUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemDecks.json"
+  },
+  "cards": {
+    "dataUrl": "https://U2301.github.io/Kodem-TCG-Arena/KodemCards.tcg.json"
+  },
   "images": {
     "frontTemplate": "https://U2301.github.io/Kodem-TCG-Arena/images/{id}.webp",
     "backDefault": "https://U2301.github.io/Kodem-TCG-Arena/images/kodem-back.png"
   },
+  "deckBuilding": {
+    "mainFilters": ["type", "energy", "set"],
+    "formats": [
+      {
+        "title": "Classic",
+        "gameplay": "Classic"
+      }
+    ]
+  },
+  "gameplay": {
+    "Classic": {
+      "mulligan": {
+        "info": "",
+        "startingHandSize": "0",
+        "drawNewHand": false,
+        "putSelectionAtBottom": false,
+        "drawNewSelectedCards": false
+      },
+      "newTurn": {
+        "drawOnStart": false,
+        "sharedTurn": false,
+        "firstPlayerTokenName": "",
+        "drawPerTurn": 1
+      },
+      "defaultNotes": "",
+      "tokens": [],
+      "countersStartingValues": ["0"],
+      "hideFacedDownCards": false
+    }
+  },
   "layout": {
     "zones": [
-      {
-        "id": "deck",
-        "name": "Mazo",
-        "visible": false
-      },
-      {
-        "id": "board",
-        "name": "Zona Principal",
-        "slots": 3,
-        "visible": true
-      },
-      {
-        "id": "protector",
-        "name": "Protector",
-        "visible": true
-      },
-      {
-        "id": "bio",
-        "name": "Bio",
-        "visible": true
-      },
-      {
-        "id": "equips",
-        "name": "Equipos",
-        "visible": true
-      },
-      {
-        "id": "grave",
-        "name": "Extinción",
-        "visible": true
-      }
+      { "id": "deck",      "name": "Mazo",           "visible": false },
+      { "id": "board",     "name": "Zona Principal", "slots": 3, "visible": true },
+      { "id": "protector", "name": "Protector",      "visible": true },
+      { "id": "bio",       "name": "Bio",            "visible": true },
+      { "id": "equips",    "name": "Equipos",        "visible": true },
+      { "id": "grave",     "name": "Extinción",      "visible": true }
     ],
     "startingSetup": {
-      "putFaceDown": {
-        "board": 3
-      },
-      "protector": {
-        "life": 12,
-        "rests": 3
-      },
+      "putFaceDown": { "board": 3 },
+      "protector": { "life": 12, "rests": 3 },
       "lifeDefault": 6
     }
   },
@@ -56,23 +60,13 @@
     "minDeckSize": 15,
     "maxDeckSize": 24,
     "shuffleDeck": false,
-    "replacement": {
-      "take": 3,
-      "choose": 1,
-      "putBackBottom": true
-    }
+    "replacement": { "take": 3, "choose": 1, "putBackBottom": true }
   },
+
+
   "script": "https://U2301.github.io/Kodem-TCG-Arena/Script_Kodem.js",
   "ui": {
-    "statusTags": [
-      "Quemar",
-      "Envenenar",
-      "Abismar",
-      "Protegida/o"
-    ],
-    "counters": [
-      "Vida",
-      "Descansos"
-    ]
+    "statusTags": ["Quemar", "Envenenar", "Abismar", "Protegida/o"],
+    "counters": ["Vida", "Descansos"]
   }
 }
